@@ -1,7 +1,0 @@
-#jdbc
-jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://47.106.87.72:3307/mysql?useSSL=false&useUnicode=true&characterEncoding=utf8
-jdbc.username=root
-jdbc.password=root
-jdbc.maxActive=50
-jdbc.maxWait=30000
