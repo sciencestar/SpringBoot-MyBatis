@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName MyBatisMapperScannerConfig
- * @Description: TODO
+ * @Description: TODO mybatis扫描配置
  * @Author lxc
  * @Date 2020/3/30 16:01
  * @Version V1.0

@@ -13,7 +13,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 /**
  * @ClassName ClusterDataSourceConfiguration
- * @Description: TODO
+ * @Description: TODO 从数据库数据源配置
  * @Author lxc
  * @Date 2020/3/30 16:32
  * @Version V1.0

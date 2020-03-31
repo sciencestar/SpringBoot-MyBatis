@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 /**
  * @ClassName MyBatisConfig
- * @Description: TODO
+ * @Description: TODO mybatis配置
  * @Author lxc
  * @Date 2020/3/30 15:57
  * @Version V1.0

@@ -14,7 +14,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 /**
  * @ClassName MasterDataSourceConfiguration
- * @Description: TODO
+ * @Description: TODO 主数据库数据源配置
  * @Author lxc
  * @Date 2020/3/30 16:26
  * @Version V1.0

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * @ClassName DataSourceConfiguration
- * @Description: TODO
+ * @Description: TODO mybatis数据源配置
  * @Author lxc
  * @Date 2020/3/30 15:52
  * @Version V1.0

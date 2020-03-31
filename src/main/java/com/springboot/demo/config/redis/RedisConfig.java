@@ -22,7 +22,7 @@ import java.lang.reflect.Method;
 
 /**
  * @ClassName RedisConfig
- * @Description: TODO
+ * @Description: TODO redis配置
  * @Author lxc
  * @Date 2020/3/30 17:35
  * @Version V1.0
