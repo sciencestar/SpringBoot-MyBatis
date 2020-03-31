@@ -1,0 +1,30 @@
+---
+spring:
+  redis:
+    password:
+    database: 0
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: -1
+    host: 47.106.87.72
+    timeout: 5000
+cluster:
+  datasource:
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    maxWait: 60000
+    url: jdbc:mysql://47.106.87.72:3308/mysql?useSSL=false&useUnicode=true&characterEncoding=utf8
+    maxActive: 50
+    username: root
+master:
+  datasource:
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    maxWait: 60000
+    url: jdbc:mysql://47.106.87.72:3307/mysql?useSSL=false&useUnicode=true&characterEncoding=utf8
+    maxActive: 50
+    username: root
