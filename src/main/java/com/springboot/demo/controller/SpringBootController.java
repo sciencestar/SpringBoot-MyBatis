@@ -2,6 +2,10 @@ package com.springboot.demo.controller;
 
 import com.springboot.demo.service.TestService;
 import com.springboot.demo.util.RedisUtils;
+import org.apache.catalina.Group;
+import org.apache.catalina.Role;
+import org.apache.catalina.User;
+import org.apache.catalina.UserDatabase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -24,11 +29,6 @@ public class SpringBootController {
     public static final Logger log = LoggerFactory.getLogger(SpringBootController.class);
     @Autowired
     TestService testService;
-
-    /*@GetMapping("/hello")
-    public String hello() {
-        return testService.test();
-    }*/
 
     @Autowired
     private RedisUtils redisUtils;
@@ -52,5 +52,106 @@ public class SpringBootController {
             log.info("数据插入缓存" + str);
         }
         return str;
+    }
+
+    @GetMapping("/say")
+    public String say() {
+        return testService.test();
+    }
+
+    @RequestMapping(value = "/getUserInfo")
+    public String getUserInfo(){
+        User user = new User() {
+            @Override
+            public String getFullName() {
+                return "Tom";
+            }
+
+            @Override
+            public void setFullName(String s) {
+                s="mike";
+            }
+
+            @Override
+            public Iterator<Group> getGroups() {
+                return null;
+            }
+
+            @Override
+            public String getPassword() {
+                return null;
+            }
+
+            @Override
+            public void setPassword(String s) {
+
+            }
+
+            @Override
+            public Iterator<Role> getRoles() {
+                return null;
+            }
+
+            @Override
+            public UserDatabase getUserDatabase() {
+                return null;
+            }
+
+            @Override
+            public String getUsername() {
+                return null;
+            }
+
+            @Override
+            public void setUsername(String s) {
+
+            }
+
+            @Override
+            public void addGroup(Group group) {
+
+            }
+
+            @Override
+            public void addRole(Role role) {
+
+            }
+
+            @Override
+            public boolean isInGroup(Group group) {
+                return false;
+            }
+
+            @Override
+            public boolean isInRole(Role role) {
+                return false;
+            }
+
+            @Override
+            public void removeGroup(Group group) {
+
+            }
+
+            @Override
+            public void removeGroups() {
+
+            }
+
+            @Override
+            public void removeRole(Role role) {
+
+            }
+
+            @Override
+            public void removeRoles() {
+
+            }
+
+            @Override
+            public String getName() {
+                return null;
+            }
+        };
+        return user.getFullName();
     }
 }

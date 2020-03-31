@@ -1,5 +1,14 @@
 ---
 spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    password: admin
+    port: 5672
+    host: 47.107.97.120
+    username: admin
   redis:
     password:
     database: 0
